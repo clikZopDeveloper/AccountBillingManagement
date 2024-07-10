@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    <data>
+            <variable
+                name="loginViewModel"
+                type="com.example.salesapp.viewmodelactivity.LoginViewModel" />
+        </data>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activity.LoginActivity">
+
+        <include
+            android:id="@+id/igToolbar"
+            layout="@layout/toolbaractivity" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Upload Picture"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/btnUplaodImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_6dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/btnAadharFront"
+                        android:layout_width="@dimen/_100dip"
+                        android:layout_height="@dimen/_100dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/add_file" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dip"
+                    android:background="@color/light_primar_color"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start"
+                    android:visibility="gone"
+                    android:paddingHorizontal="@dimen/_6dp"
+                    android:paddingVertical="@dimen/_10dp"
+                    android:text="Add Sale"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:hint="Select Billed/Not Billed">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectBilled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:hint="Select Company">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select Customer"
+                    app:boxStrokeColor="@color/light_grays">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--   <AutoCompleteTextView
+                       android:id="@+id/SelectBilled"
+                       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/edittest_shape"
+                       android:paddingVertical="12dp"
+                       android:inputType="none"
+                       android:elevation="@dimen/_4dip"
+                       android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                       android:drawableTint="@color/black"
+                       android:paddingHorizontal="@dimen/_10dp"
+                       android:layout_marginTop="@dimen/_10dp"
+                       android:hint="Select Billed/Not Billed"/>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editSalesDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittest_shape"
+                        android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+                        android:drawableTint="@color/black"
+                        android:elevation="@dimen/_4dip"
+                        android:hint="Invoice Date"
+                        android:paddingHorizontal="@dimen/_10dp"
+                        android:paddingVertical="12dp" />
+
+                    <EditText
+                        android:id="@+id/editDueDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5dip"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittest_shape"
+                        android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+                        android:drawableTint="@color/black"
+                        android:elevation="@dimen/_4dip"
+                        android:hint="Select Due Date"
+                        android:paddingHorizontal="@dimen/_10dp"
+                        android:paddingVertical="12dp" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select TCS">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectTCS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select GSTType">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectGSTType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@color/light_primar_color"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_6dp"
+                    android:paddingVertical="@dimen/_6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="Items"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/btnAddCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_round_shape_white"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="Add"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select Category"
+                    app:boxStrokeColor="@color/light_grays">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select Sub Category"
+                    app:boxStrokeColor="@color/light_grays">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectSubCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <EditText
+                    android:id="@+id/editDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittest_shape"
+                    android:elevation="@dimen/_4dip"
+                    android:hint="Enter Description"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:paddingVertical="12dp" />
+
+                <EditText
+                    android:id="@+id/editQty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittest_shape"
+                    android:elevation="@dimen/_4dip"
+                    android:hint="Enter Qty"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:paddingVertical="12dp" />
+
+                <EditText
+                    android:id="@+id/editPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittest_shape"
+                    android:elevation="@dimen/_4dip"
+                    android:hint="Enter Price"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:paddingVertical="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select GST"
+                    app:boxStrokeColor="@color/light_grays">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectGST"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select GST Type"
+                    app:boxStrokeColor="@color/light_grays">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/SelectItemGSTType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <EditText
+                    android:id="@+id/editCommisionPerQty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittest_shape"
+                    android:elevation="@dimen/_4dip"
+                    android:hint="Enter Commision Per Qty"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/_10dp"
+                    android:paddingVertical="12dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcAllProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_add_product" />
+
+                <TextView
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_30dip"
+                    android:layout_marginTop="@dimen/_40dip"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:background="@drawable/btn_round_shape_white"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+        <!-- android:onClick="@{()->loginViewModel.submit()}"-->
+
+    </LinearLayout>
+
+
+</layout>

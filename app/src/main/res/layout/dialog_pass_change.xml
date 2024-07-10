@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:background="@drawable/topround">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:padding="6dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/cirle_shape"
+            android:backgroundTint="@color/white"
+            android:padding="2dp"
+            android:src="@drawable/quantum_ic_clear_grey600_24"
+            android:tint="@color/black"/>
+    </RelativeLayout>
+
+<EditText
+    android:id="@+id/edPassChange"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_round_shape_white"
+    android:backgroundTint="@color/white"
+    android:hint="Enter Password"
+    android:elevation="@dimen/_4dip"
+    android:layout_marginBottom="@dimen/_5dip"
+    android:layout_marginHorizontal="@dimen/_10dp"
+    android:layout_marginTop="@dimen/_5dip"
+    android:paddingVertical="@dimen/_10dp"
+    android:drawableLeft="@drawable/ic_baseline_lock_24"
+    android:drawablePadding="@dimen/_10dp"
+    android:drawableTint="@color/colorPrimary"
+    android:paddingHorizontal="@dimen/_4dip"/>
+
+    <TextView
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_30dip"
+        android:layout_marginTop="@dimen/_20dip"
+        android:background="@drawable/btn_round_shape"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:padding="15dp"
+        android:text="Submit"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

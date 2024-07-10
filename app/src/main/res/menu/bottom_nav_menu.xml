@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_expenses"
+        android:icon="@drawable/expense_icon"
+        android:title="@string/menu_gallery" />
+
+    <item
+        android:id="@+id/navigation_wallet_ledger"
+        android:icon="@drawable/wallet_leadger_icon"
+        android:title="@string/menu_slideshow"
+        android:visible="false"/>
+    <item
+        android:id="@+id/navigation_sales"
+        android:icon="@drawable/sales_icon"
+        android:title="@string/menu_sales" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/menu_setting" />
+
+</menu>
